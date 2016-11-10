@@ -1,10 +1,11 @@
-require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
+require File.expand_path("/usr/local/Homebrew/Library/Taps/homebrew/homebrew-php/Abstract/abstract-php-extension.rb", __FILE__)
 
 class Php56Excel < AbstractPhp56Extension
   init
   homepage 'https://github.com/iliaal/php_excel'
   url 'https://github.com/iliaal/php_excel/archive/1.0.tar.gz'
   head 'https://github.com/iliaal/php_excel.git'
+  sha256 'd111b1e5a81a10bc80bf52f305b569125a5f370ffd7c94476f767be8bc81001b'
 
   depends_on 'autoconf' => :build
   depends_on 'php56' unless build.include?('without-homebrew-php')
