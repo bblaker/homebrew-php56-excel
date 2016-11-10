@@ -4,6 +4,7 @@ A simple formula for installing libxl and the php_excel library.  To be used wit
 
 ## Usage
 
+```sh
 brew tap bblaker/homebrew-php56-libxl
 brew install php56-excel
-
+```
