@@ -18,6 +18,7 @@ class Php56Excel < AbstractPhp56Extension
     system "./configure", "--prefix=#{prefix}",
                           "--with-libxl-incdir=#{Formula['libxl'].opt_prefix}/include_c/",
                           "--with-libxl-libdir=#{Formula['libxl'].opt_prefix}/lib/",
+			  "--with-libxml-dir=#{Formula['libxml2'].opt_prefix}",
                           phpconfig
 
     system "make"
