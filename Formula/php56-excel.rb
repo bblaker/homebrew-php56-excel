@@ -10,7 +10,7 @@ class Php56Excel < AbstractPhp56Extension
   depends_on 'autoconf' => :build
   depends_on 'php56' unless build.include?('without-homebrew-php')
   depends_on 'libxl'
-  depends_on 'libxml2' if build.include?('with-homebrew-libxml2')
+  depends_on 'libxml2' 
 
   def install
     ENV.universal_binary if build.universal?
