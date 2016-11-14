@@ -10,7 +10,6 @@ class Php56Excel < AbstractPhp56Extension
   depends_on 'autoconf' => :build
   depends_on 'php56' unless build.include?('without-homebrew-php')
   depends_on 'libxl'
-  depends_on 'libxml2' 
 
   def install
     ENV.universal_binary if build.universal?
@@ -19,7 +18,7 @@ class Php56Excel < AbstractPhp56Extension
     system "./configure", "--prefix=#{prefix}",
                           "--with-libxl-incdir=#{Formula['libxl'].opt_prefix}/include_c/",
                           "--with-libxl-libdir=#{Formula['libxl'].opt_prefix}/lib/",
-			  "--with-libxml-dir=#{Formula['libxml2'].opt_prefix}",
+			  "--with-libxml-dir=/usr/include/",
                           phpconfig
 
     system "make"
